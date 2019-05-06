@@ -369,14 +369,12 @@ public class Bittrexv3 {
         }
         return result;
     }
-    public String postAdresses(String currencySymbol){
-        String result ="false";
-        String request_url = generateUrl("addresses", currencySymbol);
-        try {
-            result = getResponseBody(request_url,"POST") ;
-        } catch (Exception e) {
-            System.out.println(e.toString());
-        }
-        return result;
-    }
+    // TODO:  POST /addresses
+    // TODO: DELETE /orders/{orderId}
+    // TODO: POST /orders
+    // TODO: POST /subaccounts
+    // TODO: GET /subaccounts/{subaccountId}
+    // TODO: DELETE /withdrawals/{withdrawalId}
+    // TODO: POST /withdrawals
+    
 }
