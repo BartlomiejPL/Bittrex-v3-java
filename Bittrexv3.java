@@ -1,13 +1,11 @@
 /**
-* This class provides full functionality of Bittrex 3.1 API (BETA)
-*
-* @author  Bartłomiej Woźniak
-* @version 0.9
-* @since   2019-05-06
-*/
+ * This class provides full functionality of Bittrex 3.1 API (BETA)
+ *
+ * @author  Bartłomiej Woźniak
+ * @version 0.9
+ * @since   2019-05-06
+ */
 
-import main.java.ReconnectionAttemptsExceededException;
-import main.java.SHA512;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -28,8 +26,8 @@ public class Bittrexv3 {
     public static final int DEFAULT_RETRY_DELAY = 15;
     private final String API_VERSION = "3", INITIAL_URL = "https://api.bittrex.com/";
     private final String encryptionAlgorithm = "HmacSHA512";
-    private String apikey;
-    private String secret;
+    private final String apikey;
+    private final String secret;
     private final int retryAttempts;
     private int retryAttemptsLeft;
     private final int retryDelaySeconds;
@@ -69,7 +67,7 @@ public class Bittrexv3 {
         url += parameter2;
         return url;
     }
-    private String getResponseBody(final String url, String method) throws NoSuchAlgorithmException {
+    private String getResponseBody(final String url, String method) throws Exception {
         long timestamp = new Date().getTime();
         String content="";
         String signature="";
@@ -125,7 +123,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -135,7 +133,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -145,7 +143,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -155,7 +153,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -165,7 +163,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -175,7 +173,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -185,7 +183,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -195,7 +193,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -205,7 +203,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -215,7 +213,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -225,7 +223,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -235,7 +233,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -245,7 +243,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -255,7 +253,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -265,7 +263,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -275,7 +273,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -285,7 +283,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -295,7 +293,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -305,7 +303,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -315,7 +313,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -325,7 +323,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -335,7 +333,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -345,7 +343,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -355,7 +353,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -365,7 +363,7 @@ public class Bittrexv3 {
         try {
             result = getResponseBody(request_url,"GET") ;
         } catch (Exception e) {
-            System.out.println(e.toString());
+            System.out.println(e);
         }
         return result;
     }
@@ -376,5 +374,5 @@ public class Bittrexv3 {
     // TODO: GET /subaccounts/{subaccountId}
     // TODO: DELETE /withdrawals/{withdrawalId}
     // TODO: POST /withdrawals
-    
+
 }
